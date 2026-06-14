@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ULM TechSupport - Pusat Konsultasi IT & Akademik</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #0a2240 0%, #051427 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(5, 20, 39, 0.95) !important; 
+            border-bottom: 1px solid rgba(135, 206, 250, 0.15);
+        }
+        .navbar-brand span {
+            color: #ffffff;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #87cefa !important;
+        }
+        
+        .custom-card {
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            border-radius: 20px;
+            background: rgba(20, 30, 50, 0.85) !important;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+        
+        .info-panel {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(135, 206, 250, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .text-light-blue {
+            color: #87cefa !important;
+        }
+        
+        .form-label {
+            color: #87cefa !important;
+        }
+        .form-control, .form-select {
+            border: 1.5px solid rgba(135, 206, 250, 0.3);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
+            background-color: rgba(10, 25, 47, 0.7) !important;
+            color: #ffffff !important;
+        }
+        .form-control::placeholder {
+            color: rgba(255, 255, 255, 0.4) !important;
+        }
+        .form-control:focus, .form-select:focus {
+            border-color: #87cefa;
+            box-shadow: 0 0 0 4px rgba(135, 206, 250, 0.25);
+            background-color: rgba(10, 25, 47, 0.9) !important;
+        }
+        .input-group-text {
+            background-color: rgba(5, 20, 39, 0.8);
+            border: 1.5px solid rgba(135, 206, 250, 0.3);
+            border-radius: 12px;
+            color: #87cefa;
+        }
+        
+        .btn-submit {
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            background-color: #87cefa;
+            color: #0a2240 !important;
+            border: none;
+            transition: all 0.3s ease;
+        }
+        .btn-submit:hover {
+            background-color: #b0e2ff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(135, 206, 250, 0.4);
+        }
+        
+        .faq-card {
+            border: 1px solid rgba(135, 206, 250, 0.15) !important;
+            border-radius: 16px;
+            background-color: rgba(255, 255, 255, 0.04) !important;
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        .faq-card:hover {
+            transform: translateY(-4px);
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 10px 25px rgba(135, 206, 250, 0.1) !important;
+        }
+        .icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(135, 206, 250, 0.15);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        .badge-custom-blue {
+            background-color: rgba(135, 206, 250, 0.15);
+            color: #87cefa;
+        }
+        .icon-header-box {
+            background-color: #87cefa;
+            color: #0a2240;
+        }
+        code {
+            color: #ffb74d !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <i class="fa-solid fa-headset text-light-blue me-2 fs-4"></i>
+                <span>ULM TechSupport</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link px-3 active" href="#formulir-konsultasi">Ajukan Pertanyaan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="pusat-pengetahuan.html">Pusat Pengetahuan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 100px;"></div>
+
+    <div class="container my-5">
+        <div class="row g-4 justify-content-center">
+            
+            <div id="informasi-sistem" class="col-xl-8 col-lg-10 col-12">
+                <div class="info-panel p-4 p-sm-5 text-white">
+                    <div class="d-sm-flex align-items-center mb-4">
+                        <div class="icon-box mb-3 mb-sm-0 me-sm-4">
+                            <i class="fa-solid fa-laptop-code text-light-blue"></i>
+                        </div>
+                        <div>
+                            <h1 class="fw-bold mb-1 text-white" style="letter-spacing: -1px;">Butuh Bantuan Teknis & Akademik?</h1>
+                            <p class="text-white-50 m-0">Ajukan Pertanyaan!</p>
+                        </div>
+                    </div>
+                    
+                    <div class="row pt-3 border-top border-secondary g-3">
+                    
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fa-solid fa-layer-group text-light-blue me-3 mt-1 fs-6"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 text-white">Klasifikasi Permasalahan</h6>
+                                <p class="small text-white-50 mb-0">
+                                    Setiap pertanyaan dikelompokkan berdasarkan kategori untuk memudahkan penanganan.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="d-flex align-items-start">
+                            <i class="fa-solid fa-users text-light-blue me-3 mt-1 fs-6"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1 text-white">Dukungan Awal Mahasiswa</h6>
+                                <p class="small text-white-50 mb-0">
+                                    Media konsultasi sebelum pendampingan lebih lanjut.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div> 
+                </div> </div>
+
+            <div id="formulir-konsultasi" class="col-xl-8 col-lg-10 col-12">
+                <div class="card custom-card p-4 p-sm-5">
+                    <div class="mb-4 border-bottom border-secondary pb-3">
+                        <span class="badge badge-custom-blue px-3 py-2 rounded-pill fw-semibold mb-2">Pre-Consultation Form</span>
+                        <h3 class="fw-bold text-white m-0">Ajukan Pertanyaan</h3>
+                        <p class="text-white-50 small m-0">Deskripsikan topik atau eror yang ingin Anda tanyakan.</p>
+                    </div>
+                    
+                    <form id="consultationForm">
+                        <div class="mb-3">
+                            <label for="namaUser" class="form-label fw-medium small">Identitas Lengkap (Nama & NIM) <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text border-end-0"><i class="fa-regular fa-id-card"></i></span>
+                                <input type="text" class="form-control border-start-0 ps-0" id="namaUser" placeholder="Contoh: Andi - 2510817110001" required>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="prodiUser" class="form-label fw-medium small">Program Studi <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text border-end-0"><i class="fa-solid fa-graduation-cap"></i></span>
+                                <select class="form-select border-start-0 ps-0" id="prodiUser" required>
+                                    <option value="" selected disabled style="background-color: #0a2240;">Pilih program studi...</option>
+                                    <option value="Teknik Sipil" style="background-color: #0a2240;">Teknik Sipil</option>
+                                    <option value="Arsitektur" style="background-color: #0a2240;">Arsitektur</option>
+                                    <option value="Teknik Pertambangan" style="background-color: #0a2240;">Teknik Pertambangan</option>
+                                    <option value="Teknik Kimia" style="background-color: #0a2240;">Teknik Kimia</option>
+                                    <option value="Teknik Lingkungan" style="background-color: #0a2240;">Teknik Lingkungan</option>
+                                    <option value="Teknik Mesin" style="background-color: #0a2240;">Teknik Mesin</option>
+                                    <option value="Teknologi Informasi" style="background-color: #0a2240;">Teknologi Informasi</option>
+                                    <option value="Rekayasa Geologi" style="background-color: #0a2240;">Rekayasa Geologi</option>
+                                    <option value="Rekayasa Elektro" style="background-color: #0a2240;">Rekayasa Elektro</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="topikKonsul" class="form-label fw-medium small">Kategori / Topik Pertanyaan <span class="text-danger">*</span></label>
+                            <div class="input-group">
+                                <span class="input-group-text border-end-0"><i class="fa-solid fa-circle-nodes"></i></span>
+                                <select class="form-select border-start-0 ps-0" id="topikKonsul" required>
+                                    <option value="" selected disabled style="background-color: #0a2240;">Pilih  topik...</option>
+                                    <option value="Troubleshooting Software Kuliah" style="background-color: #0a2240;">Troubleshooting Software Kuliah (Matlab, Cisco, dll)</option>
+                                    <option value="Debugging Code (C++/Python/Web)" style="background-color: #0a2240;">Debugging Code (C++ / Python / Web)</option>
+                                    <option value="Konsultasi KRS & Akademik" style="background-color: #0a2240;">Konsultasi Aturan KRS & Prasyarat MK</option>
+                                    <option value="Infrastruktur Jaringan & WiFi Kampus" style="background-color: #0a2240;">Masalah Akses Akun SIMARI / WiFi Kampus</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="isiFeedback" class="form-label fw-medium small">Detail Kendala / Pertanyaan <span class="text-danger">*</span></label>
+                            <textarea class="form-control" id="isiFeedback" rows="4" placeholder="Ceritakan secara detail keluhan Anda (misal: spesifikasi laptop, pesan error compiler, atau nama dosen PA)." required></textarea>
+                            <div class="form-text text-white-50 small mt-2">
+                                <i class="fa-solid fa-triangle-exclamation text-warning me-1"></i> Jangan memasukkan informasi kata sandi/password akun SIMARI Anda demi keamanan.
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-submit w-100 btn-lg">
+                            <i class="fa-solid fa-ticket me-2"></i>Kirim
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container my-5 pt-4">
+        <div class="d-flex align-items-center mb-4">
+            <div class="icon-header-box rounded-3 p-2 me-3 d-inline-flex">
+                <i class="fa-solid fa-book-bookmark fs-5"></i>
+            </div>
+            <div>
+                <h4 class="fw-bold text-white m-0">Pertanyaan Terpopuler</h4>
+                <p class="text-white-50 small m-0">Keluhan mahasiswa terdahulu.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">SOFTWARE</span>
+                    <h5 class="fw-bold text-white mb-2">Gagal Aktivasi Lisensi Matlab ULM?</h5>
+                    <p class="text-white-50 small mb-0 flex-grow-1">Pastikan pendaftaran akun menggunakan email institusi berakhiran <code>@mhs.ulm.ac.id</code>. Aktivasi menggunakan email biasa/Gmail otomatis ditolak server MathWorks.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">COMPILER</span>
+                    <h5 class="fw-bold text-white mb-2">Error MinGW Tidak Terbaca di VS Code</h5>
+                    <p class="text-white-50 small mb-0 flex-grow-1">Masalah utama biasanya karena belum mengatur rute folder <code>C:\MinGW\bin</code> ke dalam Environment Variables Windows. Lakukan restart aplikasi VS Code setelah rute ditambahkan.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">AKADEMIK</span>
+                    <h5 class="fw-bold text-white mb-2">Syarat Mengambil MK Pemrograman Lanjut</h5>
+                    <p class="small mb-0 flex-grow-1 text-white-50">Berdasarkan buku panduan kurikulum prodi, mahasiswa wajib lulus mata kuliah Pemrograman Dasar terlebih dahulu dengan nilai minimal C. Tidak boleh diambil berbarengan.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0" style="border-radius: 20px; background-color: #141e32; border: 1px solid rgba(135, 206, 250, 0.3);">
+                <div class="modal-header text-white py-3 border-0 text-center d-block position-relative" style="background-color: #051427; border-bottom: 1px solid rgba(135, 206, 250, 0.15);">
+                    <h5 class="modal-title fw-bold m-0"><i class="fa-solid fa-clipboard-check me-2 text-light-blue"></i>Tiket Berhasil Terdaftar!</h5>
+                    <button type="button" class="btn-close btn-close-white position-absolute end-0 top-50 translate-middle-y me-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4 text-white">
+                    <p class="text-white-50 small mb-3">Berikut draf data konsultasi yang ditangkap browser:</p>
+                    <div class="p-3 rounded-3 mb-3 border border-secondary" style="background-color: rgba(5, 20, 39, 0.6);">
+                        <div class="row mb-2">
+                            <div class="col-4 text-light-blue small fw-medium">Pemohon:</div>
+                            <div class="col-8 fw-semibold text-white small" id="resNama"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4 text-light-blue small fw-medium">Prodi:</div>
+                            <div class="col-8 text-white small fw-medium" id="resProdi"></div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-4 text-light-blue small fw-medium">Topik:</div>
+                            <div class="col-8 text-white small fw-medium" id="resTopik"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4 text-light-blue small fw-medium">Deskripsi:</div>
+                            <div class="col-8 text-white-50 small text-break" id="resIsi"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-secondary w-100 rounded-3 text-white" style="background-color: rgba(255,255,255,0.1); border: none;" data-bs-dismiss="modal">Tutup</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault(); 
+            const nama = document.getElementById('namaUser').value.trim();
+            const prodi = document.getElementById('prodiUser').value;
+            const topik = document.getElementById('topikKonsul').value;
+            const isi = document.getElementById('isiFeedback').value.trim();
+
+            document.getElementById('resNama').innerText = nama;
+            document.getElementById('resProdi').innerText = prodi;
+            document.getElementById('resTopik').innerText = topik;
+            document.getElementById('resIsi').innerText = isi;
+
+            const myModal = new bootstrap.Modal(document.getElementById('successModal'));
+            myModal.show();
+            document.getElementById('consultationForm').reset();
+        });
+    </script>
+</body>
+</html>

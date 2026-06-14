@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Pengetahuan (FAQ) - ULM TechSupport</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #0a2240 0%, #051427 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+        .navbar {
+            backdrop-filter: blur(10px);
+            background-color: rgba(5, 20, 39, 0.95) !important; 
+            border-bottom: 1px solid rgba(135, 206, 250, 0.15);
+        }
+        .navbar-brand span {
+            color: #ffffff;
+        }
+        .nav-link {
+            color: rgba(255, 255, 255, 0.7) !important;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #87cefa !important;
+        }
+        
+        .header-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(135, 206, 250, 0.15);
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+        .text-light-blue {
+            color: #87cefa !important;
+        }
+        
+        .filter-btn {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(135, 206, 250, 0.2);
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 0.5rem 1.25rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background-color: #87cefa;
+            color: #0a2240;
+            border-color: #87cefa;
+            box-shadow: 0 4px 15px rgba(135, 206, 250, 0.3);
+        }
+        
+        .faq-card {
+            border: 1px solid rgba(135, 206, 250, 0.15) !important;
+            border-radius: 16px;
+            background-color: rgba(255, 255, 255, 0.04) !important;
+            backdrop-filter: blur(5px);
+            transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+        }
+        .faq-card:hover {
+            transform: translateY(-4px);
+            background-color: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 10px 25px rgba(135, 206, 250, 0.15) !important;
+        }
+        .badge-custom-blue {
+            background-color: rgba(135, 206, 250, 0.15);
+            color: #87cefa;
+        }
+        .search-input {
+            border: 1.5px solid rgba(135, 206, 250, 0.3);
+            border-radius: 12px;
+            background-color: rgba(10, 25, 47, 0.7) !important;
+            color: #ffffff !important;
+        }
+        .search-input:focus {
+            border-color: #87cefa;
+            box-shadow: 0 0 0 4px rgba(135, 206, 250, 0.25);
+        }
+        code {
+            color: #ffb74d !important;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html">
+                <i class="fa-solid fa-headset text-light-blue me-2 fs-4"></i>
+                <span>ULM TechSupport</span>
+            </a>
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto fw-medium">
+                    <li class="nav-item">
+                        <a class="nav-link px-3" href="index.html#formulir-konsultasi">Ajukan Pertanyaan</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link px-3 active" href="#">Pusat Pengetahuan</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div style="height: 100px;"></div>
+
+    <div class="container my-5">
+        
+        <div class="header-section p-4 p-sm-5 text-white mb-5">
+            <div class="d-sm-flex align-items-center justify-content-between">
+                <div class="mb-3 mb-sm-0">
+                    <span class="badge badge-custom-blue px-3 py-2 rounded-pill fw-semibold mb-2">Knowledge Base</span>
+                    <h1 class="fw-bold mb-1 text-white" style="letter-spacing: -1px;">Pusat Pengetahuan</h1>
+                    <p class="text-white-50 m-0">Temukan solusi atas pertanyaan Anda.</p>
+                </div>
+                <div>
+                    <a href="index.html#formulir-konsultasi" class="btn btn-outline-info rounded-3 py-2 px-3">
+                        <i class="fa-solid fa-arrow-left me-2"></i>Kembali ke Form
+                    </a>
+                </div>
+            </div>
+            
+            <div class="mt-4 pt-3 border-top border-secondary">
+                <div class="input-group">
+                    <span class="input-group-text bg-transparent border-end-0 text-light-blue" style="border: 1.5px solid rgba(135, 206, 250, 0.3); border-radius: 12px 0 0 12px;"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <input type="text" id="faqSearch" class="form-control search-input border-start-0 ps-0" placeholder="Cari solusi (misal: 'Matlab', 'MinGW', 'KRS')...">
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex flex-wrap gap-2 mb-4">
+            <button class="filter-btn active" onclick="filterFAQ('all')">Semua Topik</button>
+            <button class="filter-btn" onclick="filterFAQ('software')">Software</button>
+            <button class="filter-btn" onclick="filterFAQ('compiler')">Compiler / Code</button>
+            <button class="filter-btn" onclick="filterFAQ('akademik')">Akademik</button>
+            <button class="filter-btn" onclick="filterFAQ('jaringan')">Akun & Jaringan</button>
+        </div>
+
+        <div class="row g-4" id="faqGrid">
+            <div class="col-md-6 col-lg-4 faq-item" data-category="software">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">SOFTWARE</span>
+                    <h5 class="fw-bold text-white mb-2">Gagal Aktivasi Lisensi Matlab ULM?</h5>
+                    <p class="text-white-50 small mb-0 flex-grow-1">Pastikan pendaftaran akun menggunakan email institusi berakhiran <code>@mhs.ulm.ac.id</code>. Aktivasi menggunakan email pribadi biasa/Gmail otomatis ditolak server MathWorks.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 faq-item" data-category="compiler">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">COMPILER</span>
+                    <h5 class="fw-bold text-white mb-2">Error MinGW Tidak Terbaca di VS Code</h5>
+                    <p class="text-white-50 small mb-0 flex-grow-1">Masalah utama biasanya karena belum mengatur rute folder <code>C:\MinGW\bin</code> ke dalam Environment Variables Windows. Lakukan restart aplikasi VS Code setelah rute ditambahkan.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 faq-item" data-category="akademik">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">AKADEMIK</span>
+                    <h5 class="fw-bold text-white mb-2">Syarat Mengambil MK Pemrograman Lanjut</h5>
+                    <p class="small mb-0 flex-grow-1 text-white-50">Berdasarkan buku panduan kurikulum prodi, mahasiswa wajib lulus mata kuliah Pemrograman Dasar terlebih dahulu dengan nilai minimal C. Tidak boleh diambil berbarengan.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 faq-item" data-category="jaringan">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">AKUN & JARINGAN</span>
+                    <h5 class="fw-bold text-white mb-2">Akun SIMARI Terkunci atau Lupa Password?</h5>
+                    <p class="small mb-0 flex-grow-1 text-white-50">Lakukan reset password secara mandiri via email pemulihan yang didaftarkan. Jika email pemulihan tidak aktif, silakan menghubungi admin IT Fakultas di Gedung Rektorat Lt. 2.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 faq-item" data-category="software">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">SOFTWARE</span>
+                    <h5 class="fw-bold text-white mb-2">Cisco Packet Tracer Meminta Login Setiap Dibuka</h5>
+                    <p class="small mb-0 flex-grow-1 text-white-50">Gunakan opsi "Keep me logged in" saat melakukan login pertama kali dengan akun Cisco Network Academy Anda. Atau gunakan mode tamu (*Guest Mode*) dengan limitasi tertentu.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4 faq-item" data-category="compiler">
+                <div class="card faq-card h-100 p-4">
+                    <span class="badge badge-custom-blue px-2 py-1 rounded mb-2 align-self-start small">COMPILER</span>
+                    <h5 class="fw-bold text-white mb-2">Terminal VS Code Mengatakan 'python not found'</h5>
+                    <p class="small mb-0 flex-grow-1 text-white-50">Saat melakukan instalasi installer Python dari situs resmi, pastikan centang kotak **"Add Python to PATH"** di bagian paling bawah installer sebelum menekan tombol instal.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Fungsi Filter Kategori
+        function filterFAQ(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            const items = document.querySelectorAll('.faq-item');
+            items.forEach(item => {
+                if (category === 'all' || item.getAttribute('data-category') === category) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+
+        // Fungsi Filter Pencarian Teks Mandiri
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const items = document.querySelectorAll('.faq-item');
+
+            items.forEach(item => {
+                const title = item.querySelector('h5').innerText.toLowerCase();
+                const text = item.querySelector('p').innerText.toLowerCase();
+                const badge = item.querySelector('.badge').innerText.toLowerCase();
+
+                if (title.includes(query) || text.includes(query) || badge.includes(query)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
